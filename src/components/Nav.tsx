@@ -25,7 +25,43 @@ export default function Nav() {
 
   return (
     <>
+      <style>{`
+        .site-nav-menu-button {
+          display: none;
+          width: 42px;
+          height: 42px;
+          padding: 0;
+          border: 0;
+          background: transparent;
+          color: #f0efed;
+          cursor: pointer;
+        }
+
+        .site-nav-menu-button span {
+          display: block;
+          width: 22px;
+          height: 1px;
+          margin: 6px auto;
+          background: currentColor;
+          transition: transform 300ms ease, opacity 300ms ease;
+        }
+
+        .site-nav-menu-button.is-open span:first-child { transform: translateY(3.5px) rotate(45deg); }
+        .site-nav-menu-button.is-open span:last-child { transform: translateY(-3.5px) rotate(-45deg); }
+
+        @media (max-width: 720px) {
+          .site-nav {
+            height: 76px !important;
+            padding: 0 22px !important;
+          }
+          .site-nav-logo-image { height: 48px !important; }
+          .site-nav-desktop { display: none !important; }
+          .site-nav-menu-button { display: block; }
+          .site-nav-overlay { padding: 76px 22px 40px !important; }
+        }
+      `}</style>
       <nav
+        className="site-nav"
         style={{
           position: 'fixed',
           top: 0,
@@ -46,6 +82,7 @@ export default function Nav() {
         {/* Logo */}
         <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
           <img
+            className="site-nav-logo-image"
             src={vormaLogo}
             alt="VORMA Studio"
             style={{
@@ -58,7 +95,7 @@ export default function Nav() {
         </Link>
 
         {/* Desktop Links */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '40px' }}>
+        <div className="site-nav-desktop" style={{ display: 'flex', alignItems: 'center', gap: '40px' }}>
           {links.map((link) => (
             <Link
               key={link.href}
@@ -99,11 +136,23 @@ export default function Nav() {
             Start a Project
           </Link>
         </div>
+
+        <button
+          className={`site-nav-menu-button ${menuOpen ? 'is-open' : ''}`}
+          type="button"
+          aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <span />
+          <span />
+        </button>
       </nav>
 
       {/* Mobile menu overlay */}
       {menuOpen && (
         <div
+          className="site-nav-overlay"
           style={{
             position: 'fixed',
             inset: 0,
