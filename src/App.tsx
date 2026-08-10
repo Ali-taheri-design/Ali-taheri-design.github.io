@@ -6,6 +6,9 @@ import Projects from './pages/Projects'
 import CaseStudy from './pages/CaseStudy'
 import Vorma from './pages/casestudies/Vorma'
 import Negar from './pages/casestudies/Negar'
+import FarsRoboyar from './pages/casestudies/FarsRoboyar'
+import CodeIntelligence from './pages/casestudies/CodeIntelligence'
+import Rendanlab from './pages/casestudies/Rendanlab'
 import About from './pages/About'
 import Contact from './pages/Contact'
 
@@ -19,6 +22,9 @@ export default function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/vorma" element={<Vorma />} />
           <Route path="/projects/negar" element={<Negar />} />
+          <Route path="/projects/fars-roboyar" element={<FarsRoboyar />} />
+          <Route path="/projects/code-intelligence" element={<CodeIntelligence />} />
+          <Route path="/projects/rendanlab" element={<Rendanlab />} />
           <Route path="/projects/:id" element={<CaseStudy />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
