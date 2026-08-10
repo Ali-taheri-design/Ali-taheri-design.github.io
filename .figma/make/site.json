@@ -1,1 +1,8 @@
-{}
+{
+  "title": "VORMA Studio — Brand Identity & Design",
+  "description": "Independent branding studio specializing in brand strategy, logo design, and cohesive visual identity systems.",
+  "language": "en",
+  "icons": {
+    "icon": "/src/imports/vorma-mark-bold.png"
+  }
+}
