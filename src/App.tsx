@@ -12,6 +12,7 @@ import Rendanlab from './pages/casestudies/Rendanlab'
 import HamidAbbasi from './pages/casestudies/HamidAbbasi'
 import SBar from './pages/casestudies/SBar'
 import Alpha from './pages/casestudies/Alpha'
+import LionCompany from './pages/casestudies/LionCompany'
 import About from './pages/About'
 import Contact from './pages/Contact'
 
@@ -31,6 +32,7 @@ export default function App() {
           <Route path="/projects/hamid-abbasi" element={<HamidAbbasi />} />
           <Route path="/projects/s-bar" element={<SBar />} />
           <Route path="/projects/alpha" element={<Alpha />} />
+          <Route path="/projects/lion-company" element={<LionCompany />} />
           <Route path="/projects/:id" element={<CaseStudy />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
