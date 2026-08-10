@@ -9,6 +9,9 @@ import Negar from './pages/casestudies/Negar'
 import FarsRoboyar from './pages/casestudies/FarsRoboyar'
 import CodeIntelligence from './pages/casestudies/CodeIntelligence'
 import Rendanlab from './pages/casestudies/Rendanlab'
+import HamidAbbasi from './pages/casestudies/HamidAbbasi'
+import SBar from './pages/casestudies/SBar'
+import Alpha from './pages/casestudies/Alpha'
 import About from './pages/About'
 import Contact from './pages/Contact'
 
@@ -25,6 +28,9 @@ export default function App() {
           <Route path="/projects/fars-roboyar" element={<FarsRoboyar />} />
           <Route path="/projects/code-intelligence" element={<CodeIntelligence />} />
           <Route path="/projects/rendanlab" element={<Rendanlab />} />
+          <Route path="/projects/hamid-abbasi" element={<HamidAbbasi />} />
+          <Route path="/projects/s-bar" element={<SBar />} />
+          <Route path="/projects/alpha" element={<Alpha />} />
           <Route path="/projects/:id" element={<CaseStudy />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
