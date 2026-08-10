@@ -262,6 +262,37 @@ export default function BrandCaseStudy({
           filter: drop-shadow(0 18px 36px color-mix(in srgb, var(--case-accent) 18%, transparent));
         }
 
+        .brand-case-floating-mark {
+          width: min(100%, 760px);
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+        }
+
+        .brand-case-floating-mark img {
+          display: inline-block;
+          width: auto;
+          max-width: min(100%, 520px);
+          max-height: 560px;
+          object-fit: contain;
+          transition: transform 500ms cubic-bezier(0.16,1,0.3,1), filter 500ms ease;
+        }
+
+        .brand-case-floating-mark:hover img {
+          transform: scale(1.03);
+          filter: drop-shadow(0 18px 36px color-mix(in srgb, var(--case-accent) 20%, transparent));
+        }
+
+        .brand-case-hoverable img {
+          transform-origin: center;
+          transition: transform 650ms cubic-bezier(0.16,1,0.3,1), filter 650ms ease;
+        }
+
+        .brand-case-hoverable:hover img {
+          transform: scale(1.018);
+          filter: drop-shadow(0 16px 32px color-mix(in srgb, var(--case-accent) 14%, transparent));
+        }
+
         .brand-case-two-column {
           display: grid;
           grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -349,6 +380,8 @@ export default function BrandCaseStudy({
         @media (prefers-reduced-motion: reduce) {
           .brand-reveal { opacity: 1; transform: none; transition: none; }
           .brand-case-panel img,
+          .brand-case-floating-mark img,
+          .brand-case-hoverable img,
           .brand-case-artwork img,
           .brand-case-framed img,
           .brand-case-next-arrow { transition: none; }

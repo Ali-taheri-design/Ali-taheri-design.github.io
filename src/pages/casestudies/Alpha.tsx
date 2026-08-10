@@ -42,7 +42,7 @@ export default function Alpha() {
       </CaseSection>
 
       <CaseSection index="05" title="Type System">
-        <CaseImage className="brand-case-contained" src={wordmarkImage} alt="Alpha Mobile custom wordmark" />
+        <CaseImage className="brand-case-contained brand-case-hoverable" src={wordmarkImage} alt="Alpha Mobile custom wordmark" />
       </CaseSection>
 
       <CaseSection index="06" title="Website Mockup">

@@ -1,4 +1,4 @@
-import BrandCaseStudy, { CaseImage, CaseSection, Reveal } from './BrandCaseStudy'
+import BrandCaseStudy, { CaseImage, CaseSection } from './BrandCaseStudy'
 
 import logoPresentationImage from '../../imports/rendanlab-case/logo-presentation.png'
 import markImage from '../../imports/rendanlab-case/mark.png'
@@ -24,13 +24,11 @@ export default function Rendanlab() {
       nextTo="/projects/hamid-abbasi"
     >
       <CaseSection index="02" title="The Mark">
-        <Reveal className="brand-case-panel">
-          <img src={markImage} alt="Rendanlab folded ribbon R symbol" />
-        </Reveal>
+        <CaseImage className="brand-case-floating-mark" src={markImage} alt="Rendanlab folded ribbon R symbol" />
       </CaseSection>
 
       <CaseSection index="03" title="Geometry & Grid">
-        <CaseImage className="brand-case-contained" src={geometryImage} alt="Rendanlab Persian wordmark construction grid" />
+        <CaseImage className="brand-case-contained brand-case-hoverable" src={geometryImage} alt="Rendanlab Persian wordmark construction grid" />
       </CaseSection>
 
       <CaseSection index="04" title="Brand Colors">
@@ -38,7 +36,7 @@ export default function Rendanlab() {
       </CaseSection>
 
       <CaseSection index="05" title="Type System">
-        <CaseImage className="brand-case-contained" src={wordmarkImage} alt="Rendanlab Persian wordmark" />
+        <CaseImage className="brand-case-contained brand-case-hoverable" src={wordmarkImage} alt="Rendanlab Persian wordmark" />
       </CaseSection>
 
       <CaseSection index="06" title="Brand Pattern" className="brand-case-edge-to-edge">

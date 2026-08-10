@@ -1,4 +1,4 @@
-import BrandCaseStudy, { CaseImage, CaseSection, Reveal } from './BrandCaseStudy'
+import BrandCaseStudy, { CaseImage, CaseSection } from './BrandCaseStudy'
 
 import heroImage from '../../imports/code-intelligence-case/hero-wall.png'
 import markImage from '../../imports/code-intelligence-case/mark.png'
@@ -28,13 +28,11 @@ export default function CodeIntelligence() {
       nextTo="/projects/rendanlab"
     >
       <CaseSection index="02" title="The Mark">
-        <Reveal className="brand-case-panel">
-          <img src={markImage} alt="Code Intelligence D arrow application icon" />
-        </Reveal>
+        <CaseImage className="brand-case-floating-mark" src={markImage} alt="Code Intelligence D arrow application icon" />
       </CaseSection>
 
       <CaseSection index="03" title="Geometry & Grid">
-        <CaseImage className="brand-case-contained" src={geometryImage} alt="Code Intelligence bilingual logo construction grid" />
+        <CaseImage className="brand-case-contained brand-case-hoverable" src={geometryImage} alt="Code Intelligence bilingual logo construction grid" />
       </CaseSection>
 
       <CaseSection index="04" title="Brand Colors">

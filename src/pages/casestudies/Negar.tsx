@@ -221,6 +221,16 @@ export default function Negar() {
           margin: 0 auto;
         }
 
+        .negar-geometry img {
+          transform-origin: center;
+          transition: transform 650ms cubic-bezier(0.16, 1, 0.3, 1), filter 650ms ease;
+        }
+
+        .negar-geometry:hover img {
+          transform: scale(1.018);
+          filter: drop-shadow(0 16px 32px rgba(184, 138, 59, 0.14));
+        }
+
         .negar-palette-frame,
         .negar-application-frame {
           overflow: hidden;
@@ -373,6 +383,7 @@ export default function Negar() {
         @media (prefers-reduced-motion: reduce) {
           .negar-reveal { opacity: 1; transform: none; transition: none; }
           .negar-logo-figure,
+          .negar-geometry img,
           .negar-application-frame img,
           .negar-next-arrow { transition: none; }
         }
