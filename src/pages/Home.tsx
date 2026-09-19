@@ -475,8 +475,6 @@ export default function Home() {
       {/* ─── ABOUT STUDIO ─── */}
       <AboutTeaser />
 
-      {/* ─── CONTACT BAND ─── */}
-      <ContactBand />
     </main>
   )
 }
@@ -834,82 +832,3 @@ function AboutTeaser() {
   )
 }
 
-/* ─── Contact band ─── */
-function ContactBand() {
-  const { ref, visible } = useReveal()
-  return (
-    <section
-      ref={ref}
-      style={{
-        padding: '120px 40px',
-        borderTop: '1px solid rgba(255,255,255,0.08)',
-        textAlign: 'center',
-        opacity: visible ? 1 : 0,
-        transform: visible ? 'translateY(0)' : 'translateY(30px)',
-        transition: 'opacity 0.8s ease, transform 0.8s ease',
-      }}
-    >
-      <SectionLabel>Start a Project</SectionLabel>
-      <h2
-        style={{
-          fontFamily: "'Barlow Condensed', sans-serif",
-          fontWeight: 800,
-          fontSize: 'clamp(56px, 8vw, 120px)',
-          textTransform: 'uppercase',
-          letterSpacing: '-0.02em',
-          lineHeight: 0.92,
-          color: '#f0efed',
-          marginTop: '20px',
-          marginBottom: '40px',
-        }}
-      >
-        Let's Build<br />
-        <span style={{ color: '#3F63D9' }}>Something</span><br />
-        Remarkable
-      </h2>
-      <p
-        style={{
-          fontFamily: "'DM Sans', sans-serif",
-          fontWeight: 300,
-          fontSize: '17px',
-          color: '#666',
-          marginBottom: '52px',
-          maxWidth: '440px',
-          margin: '0 auto 52px',
-          lineHeight: 1.75,
-        }}
-      >
-        Ready to invest in an identity that separates your brand from everyone else?
-      </p>
-      <Link
-        to="/contact"
-        style={{
-          display: 'inline-flex',
-          alignItems: 'center',
-          gap: '16px',
-          fontFamily: "'Barlow Condensed', sans-serif",
-          fontWeight: 600,
-          fontSize: '15px',
-          letterSpacing: '0.16em',
-          textTransform: 'uppercase',
-          textDecoration: 'none',
-          color: '#111',
-          background: '#3F63D9',
-          padding: '18px 48px',
-          borderRadius: '2px',
-          transition: 'all 0.3s ease',
-        }}
-        onMouseEnter={(e) => {
-          e.currentTarget.style.background = '#5578e8'
-          e.currentTarget.style.gap = '24px'
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.background = '#3F63D9'
-          e.currentTarget.style.gap = '16px'
-        }}
-      >
-        Get in Touch <span style={{ fontSize: '18px' }}>→</span>
-      </Link>
-    </section>
-  )
-}
