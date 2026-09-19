@@ -14,7 +14,6 @@ import SBar from './pages/casestudies/SBar'
 import Alpha from './pages/casestudies/Alpha'
 import LionCompany from './pages/casestudies/LionCompany'
 import About from './pages/About'
-import Contact from './pages/Contact'
 
 export default function App() {
   return (
@@ -35,7 +34,6 @@ export default function App() {
           <Route path="/projects/lion-company" element={<LionCompany />} />
           <Route path="/projects/:id" element={<CaseStudy />} />
           <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>
