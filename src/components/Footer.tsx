@@ -49,7 +49,6 @@ export default function Footer() {
           ['/', 'Home'],
           ['/projects', 'Projects'],
           ['/about', 'About'],
-          ['/contact', 'Contact'],
         ].map(([href, label]) => (
           <Link
             key={href}
@@ -74,29 +73,6 @@ export default function Footer() {
 
       {/* Right — Social + Copyright */}
       <div style={{ textAlign: 'right' }}>
-        <div style={{ display: 'flex', gap: '20px', justifyContent: 'flex-end', marginBottom: '24px' }}>
-          {['Instagram', 'Behance', 'LinkedIn'].map((s) => (
-            <a
-              key={s}
-              href="#"
-              className="hover-line"
-              style={{
-                fontFamily: "'Barlow', sans-serif",
-                fontWeight: 500,
-                fontSize: '12px',
-                letterSpacing: '0.1em',
-                textTransform: 'uppercase',
-                textDecoration: 'none',
-                color: '#555',
-                transition: 'color 0.3s ease',
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = '#f0efed')}
-              onMouseLeave={(e) => (e.currentTarget.style.color = '#555')}
-            >
-              {s}
-            </a>
-          ))}
-        </div>
         <p
           style={{
             fontFamily: "'DM Sans', sans-serif",
