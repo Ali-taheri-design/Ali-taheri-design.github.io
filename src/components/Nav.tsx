@@ -20,7 +20,6 @@ export default function Nav() {
   const links = [
     { href: '/projects', label: 'Projects' },
     { href: '/about', label: 'About' },
-    { href: '/contact', label: 'Contact' },
   ]
 
   return (
@@ -115,26 +114,7 @@ export default function Nav() {
               {link.label}
             </Link>
           ))}
-          <Link
-            to="/contact"
-            style={{
-              fontFamily: "'Barlow Condensed', sans-serif",
-              fontWeight: 600,
-              fontSize: '13px',
-              letterSpacing: '0.12em',
-              textTransform: 'uppercase',
-              textDecoration: 'none',
-              color: '#111',
-              background: '#3F63D9',
-              padding: '9px 22px',
-              borderRadius: '2px',
-              transition: 'background 0.3s ease',
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.background = '#5578e8')}
-            onMouseLeave={(e) => (e.currentTarget.style.background = '#3F63D9')}
-          >
-            Start a Project
-          </Link>
+
         </div>
 
         <button
