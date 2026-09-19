@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react'
-import { Link } from 'react-router-dom'
 
 const PHILOSOPHY = [
   {
@@ -538,13 +537,6 @@ export default function About() {
         </Reveal>
       </section>
 
-      <section className="about-cta about-shell">
-        <SectionLabel>Start a Project</SectionLabel>
-        <h2 className="about-cta-title">Ready to Begin?</h2>
-        <Link className="about-cta-link" to="/contact">
-          Get in Touch <span aria-hidden="true">→</span>
-        </Link>
-      </section>
     </main>
   )
 }
