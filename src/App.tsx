@@ -14,6 +14,7 @@ import SBar from './pages/casestudies/SBar'
 import Alpha from './pages/casestudies/Alpha'
 import LionCompany from './pages/casestudies/LionCompany'
 import About from './pages/About'
+import AudiRSQ8 from './pages/AudiRSQ8'
 
 export default function App() {
   return (
@@ -34,6 +35,7 @@ export default function App() {
           <Route path="/projects/lion-company" element={<LionCompany />} />
           <Route path="/projects/:id" element={<CaseStudy />} />
           <Route path="/about" element={<About />} />
+          <Route path="/projects/audi-rs-q8-2020" element={<AudiRSQ8 />} />
         </Routes>
         <Footer />
       </div>
